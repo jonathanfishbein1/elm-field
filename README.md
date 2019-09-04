@@ -8,3 +8,5 @@ This package can be useful if you want to define a generic functions that work w
 Please see additional documenation here
 
 https://en.wikipedia.org/wiki/Field_(mathematics)
+
+https://www.mathsisfun.com/sets/number-types.html
