@@ -4,9 +4,21 @@ module Field exposing
     , realField
     )
 
+{-| A module for Fields
+
+# Types
+@docs Field
+
+@docs realField
+@docs complexField
+
+-}
+
 import ComplexNumbers
 
 
+{-| Field type
+-}
 type alias Field a =
     { zero : a
     , one : a
@@ -16,7 +28,8 @@ type alias Field a =
     , divide : a -> a -> a
     }
 
-
+{-| Field for Real numbers
+-}
 realField : Field Float
 realField =
     { zero = 0
@@ -27,7 +40,8 @@ realField =
     , divide = (/)
     }
 
-
+{-| Field for Complex numbers
+-}
 complexField : Field (ComplexNumbers.ComplexNumberCartesian Float)
 complexField =
     { zero = ComplexNumbers.zero
