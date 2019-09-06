@@ -1,12 +1,13 @@
 module Field exposing
     ( Field
-    , complexField
     , realField
     )
 
 {-| A module for Fields
 
+
 # Types
+
 @docs Field
 
 @docs realField
@@ -26,7 +27,9 @@ type alias Field a =
     , subtract : a -> a -> a
     , multiply : a -> a -> a
     , divide : a -> a -> a
+    , power : a -> a -> a
     }
+
 
 {-| Field for Real numbers
 -}
@@ -38,16 +41,5 @@ realField =
     , subtract = (-)
     , multiply = (*)
     , divide = (/)
-    }
-
-{-| Field for Complex numbers
--}
-complexField : Field (ComplexNumbers.ComplexNumberCartesian Float)
-complexField =
-    { zero = ComplexNumbers.zero
-    , one = ComplexNumbers.one
-    , add = ComplexNumbers.add
-    , subtract = ComplexNumbers.subtract
-    , multiply = ComplexNumbers.multiply
-    , divide = ComplexNumbers.divide
+    , power = (^)
     }
