@@ -26,7 +26,7 @@ type alias Field a =
     , subtract : a -> a -> a
     , multiply : a -> a -> a
     , divide : a -> a -> a
-    , power : a -> a -> a
+    , power : Int -> a -> a
     }
 
 
@@ -40,5 +40,5 @@ realField =
     , subtract = (-)
     , multiply = (*)
     , divide = (/)
-    , power = (^)
+    , power = \exponent base -> base ^ toFloat exponent
     }
