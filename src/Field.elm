@@ -11,7 +11,6 @@ module Field exposing
 @docs Field
 
 @docs realField
-@docs complexField
 
 -}
 
