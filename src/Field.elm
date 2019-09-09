@@ -14,8 +14,6 @@ module Field exposing
 
 -}
 
-import ComplexNumbers
-
 
 {-| Field type
 -}
