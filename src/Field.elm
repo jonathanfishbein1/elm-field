@@ -14,8 +14,6 @@ module Field exposing
 
 -}
 
-import ComplexNumbers
-
 
 {-| Field type
 -}
@@ -27,6 +25,7 @@ type alias Field a =
     , multiply : a -> a -> a
     , divide : a -> a -> a
     , power : Float -> a -> a
+    , negate : a -> a
     }
 
 
@@ -41,4 +40,5 @@ realField =
     , multiply = (*)
     , divide = (/)
     , power = \exponent base -> base ^ exponent
+    , negate = negate
     }
